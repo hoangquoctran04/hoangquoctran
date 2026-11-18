@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoang Quoc Tran (Trần Quốc Hoàng)</title>
+  <style>
+    /* Reset and base typography matching classic academic homepages */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Times New Roman", Times, Georgia, serif;
+      background-color: #ffffff;
+      color: #111111;
+      line-height: 1.58;
+      font-size: 16.5px;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Classic academic hyperlink colors */
+    a {
+      color: #0000EE;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #551A8B;
+    }
+
+    a:hover {
+      color: #0055cc;
+    }
+
+    /* Minimalist Top Navigation */
+    nav {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 22px 24px 10px;
+      border-bottom: 1px solid #dddddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-title {
+      font-weight: bold;
+      font-size: 18px;
+      color: #111111;
+      text-decoration: none;
+    }
+
+    .nav-title:visited {
+      color: #111111;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 15.5px;
+    }
+
+    .nav-links a {
+      color: #222222;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 28px 24px 80px;
+    }
+
+    /* Profile Header Block */
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 20px;
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
+    .profile-text h1 {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0 0 6px 0;
+      line-height: 1.25;
+    }
+
+    .profile-text .subtitle {
+      font-size: 16.5px;
+      color: #333333;
+      margin-bottom: 14px;
+    }
+
+    .profile-text p {
+      margin: 0 0 12px 0;
+      text-align: justify;
+    }
+
+    .profile-photo {
+      width: 170px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .profile-photo img {
+      width: 165px;
+      height: 205px;
+      object-fit: cover;
+      object-position: center 42%;
+      border: 1px solid #cccccc;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .cv-line {
+      margin: 14px 0 26px 0;
+      font-size: 16.5px;
+    }
+
+    /* Section Headings */
+    section {
+      margin-bottom: 28px;
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e2e2e2;
+      color: #111111;
+    }
+
+    /* Hanging indent paragraphs for academic bibliography entries */
+    .bib-entry {
+      margin: 0 0 12px 0;
+      padding-left: 24px;
+      text-indent: -24px;
+      text-align: left;
+    }
+
+    .plain-entry {
+      margin: 0 0 10px 0;
+    }
+
+    .sub-detail {
+      margin: 3px 0 10px 24px;
+      color: #222222;
+    }
+
+    /* Apple-style Smooth Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 14px;
+      border-top: 1px solid #dddddd;
+      font-size: 14.5px;
+      color: #555555;
+    }
+
+    /* Responsive adjustments for Mobile & Tablet */
+    @media (max-width: 680px) {
+      nav {
+        padding: 16px 18px 10px;
+      }
+
+      main {
+        padding: 20px 18px 60px;
+      }
+
+      .profile-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .profile-photo {
+        width: 140px;
+      }
+
+      .profile-photo img {
+        width: 135px;
+        height: 168px;
+      }
+
+      .profile-text h1 {
+        font-size: 26px;
+      }
+
+      .profile-text p {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav>
+    <a href="#" class="nav-title">Hoang Quoc Tran</a>
+    <div class="nav-links">
+      <a href="#education">Education</a>
+      <a href="#publication">Publication</a>
+      <a href="#conference">Conference</a>
+      <a href="#presentation">Presentation</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Header / About -->
+    <div class="profile-header reveal visible">
+      <div class="profile-text">
+        <h1>Trần Quốc Hoàng (Hoang Quoc Tran)</h1>
+        <div class="subtitle">
+          Undergraduate Student, Department of Korean Language, <a href="https://hanu.edu.vn/" target="_blank" rel="noopener">Hanoi University</a><br />
+          Email: <a href="mailto:hoangquoctran04@gmail.com">hoangquoctran04@gmail.com</a>
+        </div>
+        <p>
+          I am a senior undergraduate student majoring in Korean Studies (Advanced Program) at the Department of Korean Language, Hanoi University (HANU), and a former exchange student in Korean Language and Literature at Kookmin University, Seoul.
+        </p>
+        <p>
+          My academic interests lie at the intersection of Korean Linguistics, Korean–Vietnamese Translation Studies, AI &amp; Machine Translation Evaluation, and Second Language Acquisition.
+        </p>
+      </div>
+
+      <div class="profile-photo">
+        <img src="IMG_7215.jpg"
+             alt="Trần Quốc Hoàng"
+             onerror="this.onerror=null; this.src='https://placehold.co/330x410/f4f4f4/222222?text=IMG_7215.jpg';" />
+      </div>
+    </div>
+
+    <div class="cv-line reveal">
+      PDF version of my CV: [<a href="CV_TranQuocHoang.pdf" target="_blank">CV</a>]
+    </div>
+
+    <!-- Education -->
+    <section id="education" class="reveal">
+      <h2>Education</h2>
+
+      <p class="plain-entry">
+        2022–2027 (Expected): B.A. in <em>Korean Studies (Advanced Program)</em>, <a href="https://hanu.edu.vn/" target="_blank" rel="noopener">Hanoi University</a> (Cumulative GPA: 3.85/4.00)
+      </p>
+
+      <p class="plain-entry">
+        2025: Exchange Student in <em>Korean Language and Literature</em>, <a href="https://www.kookmin.ac.kr/" target="_blank" rel="noopener">Kookmin University</a>, Seoul, South Korea (GPA: 4.39/4.50; 98.7/100)
+      </p>
+      <div class="sub-detail">
+        Coursework: <em>Theories of Korean Grammar, Practical Writing in Korean, Speech Communication, Field Study on Korean Mass Culture, Marketing, Organizational Behavior, Startup Ecosystem and Entrepreneurial Finance, Computer Programming 2, Chinese Communication Level 1</em>.
+      </div>
+
+      <p class="plain-entry">
+        2019–2022: High School Diploma, <em>Son Tay High School for the Gifted</em>, Hanoi, Vietnam
+      </p>
+    </section>
+
+    <!-- Publication -->
+    <section id="publication" class="reveal">
+      <h2>Publication</h2>
+
+      <p class="bib-entry">
+        <strong>Trần, Quốc Hoàng.</strong> (2026). Case study on Characteristics of Korean-Vietnamese literary title translation by selected Artificial Intelligence tools: An approach based on Nord’s title function framework. In <em>Korea Journal</em>, Korea Research Association of Vietnam (KRAV).
+      </p>
+    </section>
+
+    <!-- Conference -->
+    <section id="conference" class="reveal">
+      <h2>Conference</h2>
+
+      <p class="bib-entry">
+        Phạm, Thị Ngọc, Nguyễn, Thanh Vân, &amp; <strong>Trần, Quốc Hoàng.</strong> (2026). The ability of selected AI tools to handle Vietnamese–Korean untranslatability: An analysis of conversational data from the film <em>Face Off 6</em>. <em>International Academic Conference</em>, Hanoi University of Industry.
+      </p>
+    </section>
+
+    <!-- Presentation -->
+    <section id="presentation" class="reveal">
+      <h2>Presentation</h2>
+
+      <p class="bib-entry">
+        <strong>Trần, Quốc Hoàng.</strong> (2026). A study of AI tools for supporting Korean translation. <em>2026 University-Level Academic Conference</em>, Hanoi University. (Rated Good)
+      </p>
+
+      <p class="bib-entry">
+        <strong>Trần, Quốc Hoàng.</strong> (2024). A study on Negative Transfer of using Vietnamese tones in the pronunciation of Korean by Vietnamese learners. <em>Annual Academic Conference for Undergraduate Students</em>, Dep. of Korean Language, Hanoi University.
+      </p>
+
+      <p class="bib-entry">
+        <strong>Trần, Quốc Hoàng</strong>, Trần, Ngọc Minh, &amp; Dương, Minh Khuê. (2024). A study on the EPR model in South Korea and lessons for Vietnamese enterprises. <em>Annual Academic Conference for Undergraduate Students</em>, Dep. of Korean Language, Hanoi University.
+      </p>
+
+      <p class="bib-entry">
+        <strong>Trần, Quốc Hoàng.</strong> (2023). A study on the effects of “Impression Exposure” of Korean Chinese letters on Korean vocabulary retention among Vietnamese learners. <em>Annual Academic Conference for Undergraduate Students</em>, Dep. of Korean Language, Hanoi University.
+      </p>
+    </section>
+
+    <!-- Experience & Activities -->
+    <section id="experience" class="reveal">
+      <h2>Experience &amp; Activities</h2>
+
+      <p class="plain-entry">
+        Mar 2026–now: Reporter, Editorial Department, <em>Korean Association in Hanoi (하노이한인회)</em> — Covering Vietnamese local news and authoring Korean-language articles for the Korean expatriate community.
+      </p>
+
+      <p class="plain-entry">
+        Part-time Interpreter, Consular Section, <em>Embassy of the Republic of Korea in Vietnam</em>
+      </p>
+
+      <p class="plain-entry">
+        Freelance Korean Language Instructor — Designing syllabi and teaching beginner-level Korean courses.
+      </p>
+
+      <p class="plain-entry">
+        2024–2025: CEO &amp; Founder, <em>Korean Language Learning EdTech Startup Project</em> — Reached Top 5 at the <em>Social Innovation Launch</em> Startup Competition.
+      </p>
+
+      <p class="plain-entry">
+        2025: Fellow, <em>Daesang ETFF</em>, Bali, Indonesia — Film production and cross-cultural media communication.
+      </p>
+
+      <p class="plain-entry">
+        Content Creator &amp; Supporter, <em>WeKO (KOICA Korea)</em> — Producing digital content on Korea’s Official Development Assistance (ODA).
+      </p>
+
+      <p class="plain-entry">
+        2024: Supporter at <em>KOCCA Vietnam</em> &amp; Member at <em>Vietnam–Korea Cultural Exchange Center</em>.
+      </p>
+
+      <p class="plain-entry">
+        2022–2023: Content Curator at <em>TEDxHANU</em> (co-organized two TEDx conferences) &amp; External Relations Member at <em>DEL HANU</em>.
+      </p>
+    </section>
+
+    <!-- Honors, Awards & Certifications -->
+    <section id="awards" class="reveal">
+      <h2>Honors, Awards &amp; Certifications</h2>
+
+      <p class="plain-entry">
+        <strong>Language Proficiency:</strong> TOPIK Level 6; IELTS 7.0 Overall; HSK Level 4 (Expected early 2027).
+      </p>
+
+      <p class="plain-entry">
+        2025: First Prize, <em>Essay Contest on Study Abroad Life in Korea (한국 유학 생활 수기 공모전)</em>.
+      </p>
+
+      <p class="plain-entry">
+        2025: Top 5 Finalist, <em>Social Innovation Launch Startup Competition</em>.
+      </p>
+
+      <p class="plain-entry">
+        Recipient of the <em>Korea Foundation – Samsung Scholarship</em> and the <em>Bong &amp; Sul Scholarship (Baemin Korea)</em>.
+      </p>
+
+      <p class="plain-entry">
+        2022–2026: <em>Academic Encouragement Scholarship</em>, Hanoi University (awarded for 6/6 consecutive semesters).
+      </p>
+
+      <p class="plain-entry">
+        2024: First Prize, <em>Korean Speaking Contest</em>, Foreign Trade University (FTU).
+      </p>
+
+      <p class="plain-entry">
+        2024: First Prize, <em>Korean Literature Dramatization Contest</em>.
+      </p>
+
+      <p class="plain-entry">
+        2023: Bronze Medal, <em>Saigon Model United Nations (S.MUN)</em>.
+      </p>
+
+      <p class="plain-entry">
+        2023: Third Prize, <em>Korean Language Enthusiasts Contest</em>, Hanoi University of Industry.
+      </p>
+    </section>
+
+    <footer>
+      Last updated: November 2026 &middot; Hosted on GitHub Pages
+    </footer>
+  </main>
+
+  <script>
+    // Apple-style smooth scroll reveal
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.08
+      });
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
